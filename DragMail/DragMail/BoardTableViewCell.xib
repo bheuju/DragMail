@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1I-gZ-SKO" userLabel="cellContainer">
-                        <rect key="frame" x="10" y="10" width="296" height="123.5"/>
+                        <rect key="frame" x="10" y="5" width="296" height="133.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4l3-WY-4aF">
                                 <rect key="frame" x="10" y="10" width="276" height="72"/>
@@ -34,6 +34,9 @@
                                                     <constraint firstAttribute="width" constant="20" id="vsU-ag-QZ6"/>
                                                 </constraints>
                                                 <state key="normal" image="checkbox_false"/>
+                                                <connections>
+                                                    <action selector="btnCheckBoxClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xrz-S9-Dsi"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzg-Dc-YGR">
                                                 <rect key="frame" x="30" y="0.0" width="186" height="20"/>
@@ -101,15 +104,16 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="T1I-gZ-SKO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="9Fv-Ml-Ttd"/>
+                    <constraint firstItem="T1I-gZ-SKO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="9Fv-Ml-Ttd"/>
                     <constraint firstAttribute="trailing" secondItem="T1I-gZ-SKO" secondAttribute="trailing" constant="10" id="Mvi-dO-Kwv"/>
-                    <constraint firstAttribute="bottom" secondItem="T1I-gZ-SKO" secondAttribute="bottom" constant="10" id="aIa-pP-Frz"/>
+                    <constraint firstAttribute="bottom" secondItem="T1I-gZ-SKO" secondAttribute="bottom" constant="5" id="aIa-pP-Frz"/>
                     <constraint firstItem="T1I-gZ-SKO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wkR-3O-Jzq"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnCheckBox" destination="Fua-l2-wsc" id="WeS-pB-DfP"/>
                 <outlet property="cellContainerView" destination="T1I-gZ-SKO" id="fZX-8X-A6n"/>
                 <outlet property="emailDescription" destination="qef-vl-lXF" id="N4J-HF-wpQ"/>
                 <outlet property="sender" destination="Dzg-Dc-YGR" id="Hpg-bE-pQi"/>

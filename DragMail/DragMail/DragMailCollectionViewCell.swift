@@ -27,6 +27,9 @@ class DragMailCollectionViewCell: UICollectionViewCell, UITableViewDataSource, U
     override func awakeFromNib() {
         super.awakeFromNib()
     
+        self.layer.borderWidth = 0.5
+        self.layer.borderColor = UIColor.lightGray.cgColor
+        
         //TableView delegate and datasource
         boardTableView.delegate = self
         boardTableView.dataSource = self
@@ -48,7 +51,7 @@ class DragMailCollectionViewCell: UICollectionViewCell, UITableViewDataSource, U
         let cell = tableView.dequeueReusableCell(withIdentifier: BOARD_CELL_REUSE_ID, for: indexPath) as! BoardTableViewCell
         
         //cell.message.text = data?.items[indexPath.row]
-        cell.configCell(item: (data?.items[indexPath.row])!)
+        cell.configCell(item: (BoardItemViewModel(mailResult: (data?.items[indexPath.row])!, checkStatus: false)))
         
         let lpGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(didLongPressCell))
         cell.addGestureRecognizer(lpGestureRecognizer)
@@ -59,7 +62,7 @@ class DragMailCollectionViewCell: UICollectionViewCell, UITableViewDataSource, U
     @objc func didLongPressCell(recognizer: UILongPressGestureRecognizer) {
         
         //Get parent view (Collection view)
-        let collectionView = self.superview
+        let collectionView = self.superview as? UICollectionView
         
         switch recognizer.state {
         case .began:
@@ -91,6 +94,9 @@ class DragMailCollectionViewCell: UICollectionViewCell, UITableViewDataSource, U
             dragView?.center = recognizer.location(in: collectionView)
             //TODO: do checking in ".changed" if need dynamic reordering of tableview cells
             
+            //AutoScroll of parent collectionview
+            dropDelegate?.cellDraggingAt((dragView?.center)!)
+            
         case .ended:
             //print("Drag ended")
             
@@ -104,7 +110,7 @@ class DragMailCollectionViewCell: UICollectionViewCell, UITableViewDataSource, U
             }
             
             //TODO: check "dragView.center" position in collection view
-            if let dropPoint = dragView?.center {
+            if let dropPoint = dragView?.center {                
                 //TODO: get indexPath of collectionViewCell and its tableView for ended point of "dragView.center"
                 dropDelegate?.cellDroppedAt(dropPoint, srcIndexPath: self.indexPath!, srcItemIndexPath: srcItemIndexPath!)
             }
@@ -133,6 +139,7 @@ class DragMailCollectionViewCell: UICollectionViewCell, UITableViewDataSource, U
 
 protocol CellDropDelegate: class {
     func cellDroppedAt(_ dropPoint: CGPoint, srcIndexPath: IndexPath, srcItemIndexPath: IndexPath)
+    func cellDraggingAt(_ dragPoint: CGPoint)
 }
 
 

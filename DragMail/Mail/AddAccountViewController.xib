@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddAccountViewController" customModule="DragMail" customModuleProvider="target">
+            <connections>
+                <outlet property="btnGoogle" destination="DUG-VA-8HI" id="X1H-pP-eA3"/>
+                <outlet property="btnICloud" destination="Igy-F9-wX5" id="d1b-Dy-LEa"/>
+                <outlet property="btnOutlook" destination="smM-D6-4uP" id="tm0-eA-fMP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lo5-cE-UZQ">
+                    <rect key="frame" x="0.0" y="228" width="375" height="211"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smM-D6-4uP">
+                            <rect key="frame" x="0.5" y="0.0" width="374" height="67"/>
+                            <state key="normal" title="Button" image="outlook"/>
+                            <connections>
+                                <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="hmw-sy-uft"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igy-F9-wX5">
+                            <rect key="frame" x="0.5" y="72" width="374" height="67"/>
+                            <state key="normal" title="Button" image="icloud"/>
+                            <connections>
+                                <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="1ce-tT-Fys"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUG-VA-8HI">
+                            <rect key="frame" x="0.5" y="144" width="374" height="67"/>
+                            <state key="normal" title="Button" image="google"/>
+                            <connections>
+                                <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="hZJ-Id-QeC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lo5-cE-UZQ" secondAttribute="trailing" id="Nrr-Eg-JzF"/>
+                <constraint firstItem="lo5-cE-UZQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="afX-c9-JwE"/>
+                <constraint firstItem="lo5-cE-UZQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hXA-BH-h9B"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="google" width="320" height="67"/>
+        <image name="icloud" width="320" height="67"/>
+        <image name="outlook" width="320" height="67"/>
+    </resources>
+</document>

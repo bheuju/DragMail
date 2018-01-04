@@ -9,27 +9,32 @@
 import UIKit
 import Postal
 
-class MailViewController: UIViewController {
-
-    @IBOutlet weak var mailTableView: UITableView!
+enum MailProvider: Int {
+    case icloud
+    case google
+    case outlook
     
-    var emails: [FetchResult] = []
+    var hostname: String {
+        switch self {
+        case .icloud: return "icloud.com"
+        case .google: return "gmail.com"
+        case .outlook: return "outlook.com"
+        }
+    }
+    
+    var preConfiguration: Configuration? {
+        switch self {
+        case .icloud: return .icloud(login: "", password: "")
+        case .google: return .gmail(login: "", password: .plain(""))
+        case .outlook: return .outlook(login: "", password: "")
+        }
+    }
+}
+
+class MailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Set tableview delegate and datasource
-        mailTableView.delegate = self
-        mailTableView.dataSource = self
-        
-        mailTableView.rowHeight = UITableViewAutomaticDimension
-        mailTableView.estimatedRowHeight = 80
-        
-        //Register cell
-        mailTableView.register(UINib(nibName: "MailTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
-        //Config navBar
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Board", style: .plain, target: self, action: #selector(displayDragMailBoard))
     }
 
     @objc func displayDragMailBoard() {
@@ -78,24 +83,16 @@ class MailViewController: UIViewController {
     }
 }
 
-extension MailViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return emails.count
+//MARK:- TableView Delegate
+extension MailTableViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let provider = MailProvider(rawValue: (indexPath as NSIndexPath).row) else { fatalError("Unknown provider") }
+        print("selected provider: \(provider)")
+        
+        performSegue(withIdentifier: loginSegueIdentifier, sender: provider.rawValue)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MailTableViewCell
-        
-        let email = emails[indexPath.row]
-        
-        cell.emailTitle.text = email.header?.subject
-        
-        let from = email.header?.from.first
-        
-        cell.emailDetails.text = "\(from!.displayName) \n<\(from!.email)>"
-        
-        return cell
-    }
-    
-    
 }
+
+

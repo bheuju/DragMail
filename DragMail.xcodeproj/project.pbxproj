@@ -14,6 +14,12 @@
 		043D2C691FF65A4E00A5EED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D2C681FF65A4E00A5EED4 /* AppDelegate.swift */; };
 		043D2C701FF65A4E00A5EED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043D2C6F1FF65A4E00A5EED4 /* Assets.xcassets */; };
 		043D2C731FF65A4E00A5EED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043D2C711FF65A4E00A5EED4 /* LaunchScreen.storyboard */; };
+		04ECB5741FFDF4FF00C282E0 /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB5721FFDF4FF00C282E0 /* AddAccountViewController.swift */; };
+		04ECB5751FFDF4FF00C282E0 /* AddAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ECB5731FFDF4FF00C282E0 /* AddAccountViewController.xib */; };
+		04ECB5781FFDFC2700C282E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB5761FFDFC2700C282E0 /* LoginViewController.swift */; };
+		04ECB5791FFDFC2700C282E0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ECB5771FFDFC2700C282E0 /* LoginViewController.xib */; };
+		04ECB57B1FFE15AD00C282E0 /* MailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB57A1FFE15AD00C282E0 /* MailProvider.swift */; };
+		04ECB57D1FFE467600C282E0 /* BoardItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB57C1FFE467600C282E0 /* BoardItemViewModel.swift */; };
 		04F2F3B01FFB41A2001C3481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F2F3AF1FFB41A2001C3481 /* Main.storyboard */; };
 		04F2F3BC1FFB4742001C3481 /* BoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2F3B61FFB473E001C3481 /* BoardTableViewCell.swift */; };
 		04F2F3BD1FFB4742001C3481 /* BoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F2F3B71FFB473E001C3481 /* BoardTableViewCell.xib */; };
@@ -21,10 +27,6 @@
 		04F2F3BF1FFB4742001C3481 /* DragMailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F2F3B91FFB473E001C3481 /* DragMailCollectionViewCell.xib */; };
 		04F2F3C01FFB4742001C3481 /* DragMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2F3BA1FFB473E001C3481 /* DragMailViewController.swift */; };
 		04F2F3C11FFB4742001C3481 /* DragMailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F2F3BB1FFB473E001C3481 /* DragMailViewController.xib */; };
-		04F8B0C21FFCC489008A465D /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8B0C01FFCC489008A465D /* MailViewController.swift */; };
-		04F8B0C31FFCC489008A465D /* MailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F8B0C11FFCC489008A465D /* MailViewController.xib */; };
-		04F8B0C61FFCD01A008A465D /* MailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8B0C41FFCD01A008A465D /* MailTableViewCell.swift */; };
-		04F8B0C71FFCD01A008A465D /* MailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F8B0C51FFCD01A008A465D /* MailTableViewCell.xib */; };
 		68838A703658EDDD3F693811 /* Pods_DragMail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446560C70654ED626C371244 /* Pods_DragMail.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,12 @@
 		043D2C6F1FF65A4E00A5EED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043D2C721FF65A4E00A5EED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043D2C741FF65A4E00A5EED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04ECB5721FFDF4FF00C282E0 /* AddAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
+		04ECB5731FFDF4FF00C282E0 /* AddAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAccountViewController.xib; sourceTree = "<group>"; };
+		04ECB5761FFDFC2700C282E0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		04ECB5771FFDFC2700C282E0 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		04ECB57A1FFE15AD00C282E0 /* MailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailProvider.swift; sourceTree = "<group>"; };
+		04ECB57C1FFE467600C282E0 /* BoardItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardItemViewModel.swift; sourceTree = "<group>"; };
 		04F2F3AF1FFB41A2001C3481 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04F2F3B61FFB473E001C3481 /* BoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTableViewCell.swift; sourceTree = "<group>"; };
 		04F2F3B71FFB473E001C3481 /* BoardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardTableViewCell.xib; sourceTree = "<group>"; };
@@ -46,10 +54,6 @@
 		04F2F3B91FFB473E001C3481 /* DragMailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DragMailCollectionViewCell.xib; sourceTree = "<group>"; };
 		04F2F3BA1FFB473E001C3481 /* DragMailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragMailViewController.swift; sourceTree = "<group>"; };
 		04F2F3BB1FFB473E001C3481 /* DragMailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DragMailViewController.xib; sourceTree = "<group>"; };
-		04F8B0C01FFCC489008A465D /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
-		04F8B0C11FFCC489008A465D /* MailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailViewController.xib; sourceTree = "<group>"; };
-		04F8B0C41FFCD01A008A465D /* MailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailTableViewCell.swift; sourceTree = "<group>"; };
-		04F8B0C51FFCD01A008A465D /* MailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailTableViewCell.xib; sourceTree = "<group>"; };
 		446560C70654ED626C371244 /* Pods_DragMail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragMail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A50D9352BCA168A961BB92 /* Pods-DragMail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragMail.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragMail/Pods-DragMail.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,7 +102,9 @@
 				04107F641FFB890F00B2F079 /* Data.swift */,
 				04107F661FFB8AB800B2F079 /* HelperExtensions.swift */,
 				04107F681FFB8C2E00B2F079 /* CustomCollectionView.swift */,
+				04ECB57A1FFE15AD00C282E0 /* MailProvider.swift */,
 				04107F6A1FFB9B4100B2F079 /* Model */,
+				04B169401FFE49DC00F1C485 /* ViewModel */,
 				04F2F3B51FFB473E001C3481 /* DragMail */,
 				04F8B0BF1FFCC457008A465D /* Mail */,
 				043D2C681FF65A4E00A5EED4 /* AppDelegate.swift */,
@@ -108,6 +114,14 @@
 				043D2C741FF65A4E00A5EED4 /* Info.plist */,
 			);
 			path = DragMail;
+			sourceTree = "<group>";
+		};
+		04B169401FFE49DC00F1C485 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04ECB57C1FFE467600C282E0 /* BoardItemViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		04F2F3B51FFB473E001C3481 /* DragMail */ = {
@@ -126,10 +140,10 @@
 		04F8B0BF1FFCC457008A465D /* Mail */ = {
 			isa = PBXGroup;
 			children = (
-				04F8B0C01FFCC489008A465D /* MailViewController.swift */,
-				04F8B0C11FFCC489008A465D /* MailViewController.xib */,
-				04F8B0C41FFCD01A008A465D /* MailTableViewCell.swift */,
-				04F8B0C51FFCD01A008A465D /* MailTableViewCell.xib */,
+				04ECB5721FFDF4FF00C282E0 /* AddAccountViewController.swift */,
+				04ECB5731FFDF4FF00C282E0 /* AddAccountViewController.xib */,
+				04ECB5761FFDFC2700C282E0 /* LoginViewController.swift */,
+				04ECB5771FFDFC2700C282E0 /* LoginViewController.xib */,
 			);
 			path = Mail;
 			sourceTree = "<group>";
@@ -213,11 +227,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04ECB5791FFDFC2700C282E0 /* LoginViewController.xib in Resources */,
 				043D2C731FF65A4E00A5EED4 /* LaunchScreen.storyboard in Resources */,
-				04F8B0C31FFCC489008A465D /* MailViewController.xib in Resources */,
 				04F2F3C11FFB4742001C3481 /* DragMailViewController.xib in Resources */,
 				04F2F3B01FFB41A2001C3481 /* Main.storyboard in Resources */,
-				04F8B0C71FFCD01A008A465D /* MailTableViewCell.xib in Resources */,
+				04ECB5751FFDF4FF00C282E0 /* AddAccountViewController.xib in Resources */,
 				04F2F3BD1FFB4742001C3481 /* BoardTableViewCell.xib in Resources */,
 				04F2F3BF1FFB4742001C3481 /* DragMailCollectionViewCell.xib in Resources */,
 				043D2C701FF65A4E00A5EED4 /* Assets.xcassets in Resources */,
@@ -291,13 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04ECB5781FFDFC2700C282E0 /* LoginViewController.swift in Sources */,
 				04F2F3BE1FFB4742001C3481 /* DragMailCollectionViewCell.swift in Sources */,
+				04ECB57D1FFE467600C282E0 /* BoardItemViewModel.swift in Sources */,
 				04107F671FFB8AB800B2F079 /* HelperExtensions.swift in Sources */,
-				04F8B0C61FFCD01A008A465D /* MailTableViewCell.swift in Sources */,
 				04107F651FFB890F00B2F079 /* Data.swift in Sources */,
 				04F2F3BC1FFB4742001C3481 /* BoardTableViewCell.swift in Sources */,
+				04ECB5741FFDF4FF00C282E0 /* AddAccountViewController.swift in Sources */,
 				04107F6C1FFB9B5400B2F079 /* BoardItem.swift in Sources */,
-				04F8B0C21FFCC489008A465D /* MailViewController.swift in Sources */,
+				04ECB57B1FFE15AD00C282E0 /* MailProvider.swift in Sources */,
 				043D2C691FF65A4E00A5EED4 /* AppDelegate.swift in Sources */,
 				04107F691FFB8C2E00B2F079 /* CustomCollectionView.swift in Sources */,
 				04F2F3C01FFB4742001C3481 /* DragMailViewController.swift in Sources */,

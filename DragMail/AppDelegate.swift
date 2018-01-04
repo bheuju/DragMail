@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //let VC = DragMailViewController(nibName: "DragMailViewController", bundle: nil)
         
-        let VC = MailViewController(nibName: "MailViewController", bundle: nil)
+        let VC = AddAccountViewController(nibName: "AddAccountViewController", bundle: nil)
         let navVC = UINavigationController(rootViewController: VC )
         window?.rootViewController = navVC
         
