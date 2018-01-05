@@ -32,9 +32,9 @@ class DragMailViewController: UIViewController {
         //Config navbar
         self.navigationItem.title = "Drag Mail"
         
-        let refreshButton = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(onRefreshVisibleCells))
+        let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(onRefreshVisibleCells))
         let addBoardButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onAddBoard))
-        self.navigationItem.rightBarButtonItems = [refreshButton, addBoardButton]
+        self.navigationItem.rightBarButtonItems = [addBoardButton, refreshButton]
         
         //collectionview delegate and datasource
         containerCollectionView.delegate = self
@@ -45,7 +45,7 @@ class DragMailViewController: UIViewController {
         //Collectionview layout
         if let layout = containerCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
-            layout.itemSize = CGSize(width: CELL_WIDTH, height: 400)
+            layout.itemSize = CGSize(width: CELL_WIDTH, height: 450)
             
             layout.minimumLineSpacing = 0
             layout.minimumInteritemSpacing = 0
@@ -129,9 +129,9 @@ extension DragMailViewController: UICollectionViewDataSource, UICollectionViewDe
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: COLLECTION_VIEW_CELL_REUSE_ID, for: indexPath) as? DragMailCollectionViewCell {
             cell.dropDelegate = self
-            cell.configCell(with: Data.shared.list[indexPath.row], indexPath: indexPath)
+            cell.cellButtonClickDelegate = self
             
-            //print("IndexPath: ", indexPath)
+            cell.configCell(with: Data.shared.list[indexPath.row], indexPath: indexPath)
             
             return cell
         }
@@ -208,6 +208,40 @@ extension DragMailViewController: CellDropDelegate {
     }
 }
 
+//MARK:- Cell Buttons click delegate
+extension DragMailViewController: CellButtonClickDelegate {
+    
+    func onEditClicked(_ sender: UIButton) {
+        
+        let alert = UIAlertController(title: "Input", message: "Enter board name", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.text = ""
+        }
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [weak alert](_) in
+            guard let alert = alert else {
+                return
+            }
+            
+            //check for empty field
+            guard let boardName = alert.textFields![0].text, alert.textFields![0].hasText else {
+                //Display cannot be empty
+                return
+            }
+            
+            print("Textfield: \(boardName)")
+            
+            //Edit board name
+            //Get index path of cell containing button clicked
+            let touchPoint = self.containerCollectionView.convert(CGPoint.zero, from: sender.superview)
+            if let cellIndexPath = self.containerCollectionView.indexPathForItem(at: touchPoint) {
+                Data.shared.list[cellIndexPath.row].boardTitle = boardName
+                self.containerCollectionView.reloadData()
+            }
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+}
 
 
 

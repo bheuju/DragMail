@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         }
         
         //prototype data
-        email.text = ""
+        email.text = "@gmail.com"
         password.text = ""
     }
     
@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
                 print("Success")
                 
                 //Fetch last 5 messages
-                postal.fetchLast("Inbox", last: 5, flags: [.fullHeaders, .body], onMessage: { (email) in
+                postal.fetchLast("Inbox", last: 8, flags: [.fullHeaders, .body], onMessage: { (email) in
                     print("UID: #\(email.uid) Subject: \(email.header!.subject)")
                     
                     //Insert to main Data array

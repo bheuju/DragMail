@@ -25,6 +25,8 @@ class BoardTableViewCell: UITableViewCell {
         cellContainerView.layer.borderWidth = 0.5
         cellContainerView.layer.borderColor = UIColor.lightGray.cgColor
         
+        self.selectionStyle = .none
+        
     }
     
     @IBAction func btnCheckBoxClicked(_ sender: UIButton) {
@@ -37,7 +39,7 @@ class BoardTableViewCell: UITableViewCell {
         
         let from = item.mailResult!.header?.from.first
         
-        self.sender.text = from!.displayName
+        self.sender.text = "#\(item.mailResult!.uid) \(from!.displayName)"
         self.subject.text = item.mailResult?.header?.subject
         self.emailDescription.text = from!.email
         

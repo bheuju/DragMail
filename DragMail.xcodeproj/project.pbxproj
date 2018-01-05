@@ -11,9 +11,13 @@
 		04107F671FFB8AB800B2F079 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04107F661FFB8AB800B2F079 /* HelperExtensions.swift */; };
 		04107F691FFB8C2E00B2F079 /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04107F681FFB8C2E00B2F079 /* CustomCollectionView.swift */; };
 		04107F6C1FFB9B5400B2F079 /* BoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04107F6B1FFB9B5400B2F079 /* BoardItem.swift */; };
+		041852BA1FFF900D00AEE42B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041852B81FFF900D00AEE42B /* TestViewController.swift */; };
+		041852BB1FFF900D00AEE42B /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041852B91FFF900D00AEE42B /* TestViewController.xib */; };
 		043D2C691FF65A4E00A5EED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D2C681FF65A4E00A5EED4 /* AppDelegate.swift */; };
 		043D2C701FF65A4E00A5EED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043D2C6F1FF65A4E00A5EED4 /* Assets.xcassets */; };
 		043D2C731FF65A4E00A5EED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043D2C711FF65A4E00A5EED4 /* LaunchScreen.storyboard */; };
+		04A67D4D1FFF9DEA00C17ACF /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A67D4B1FFF9DEA00C17ACF /* SimpleTableViewCell.swift */; };
+		04A67D4E1FFF9DEA00C17ACF /* SimpleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A67D4C1FFF9DEA00C17ACF /* SimpleTableViewCell.xib */; };
 		04ECB5741FFDF4FF00C282E0 /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB5721FFDF4FF00C282E0 /* AddAccountViewController.swift */; };
 		04ECB5751FFDF4FF00C282E0 /* AddAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ECB5731FFDF4FF00C282E0 /* AddAccountViewController.xib */; };
 		04ECB5781FFDFC2700C282E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECB5761FFDFC2700C282E0 /* LoginViewController.swift */; };
@@ -36,11 +40,15 @@
 		04107F661FFB8AB800B2F079 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		04107F681FFB8C2E00B2F079 /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
 		04107F6B1FFB9B5400B2F079 /* BoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardItem.swift; sourceTree = "<group>"; };
+		041852B81FFF900D00AEE42B /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		041852B91FFF900D00AEE42B /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		043D2C651FF65A4E00A5EED4 /* DragMail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragMail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043D2C681FF65A4E00A5EED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043D2C6F1FF65A4E00A5EED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043D2C721FF65A4E00A5EED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043D2C741FF65A4E00A5EED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A67D4B1FFF9DEA00C17ACF /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
+		04A67D4C1FFF9DEA00C17ACF /* SimpleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTableViewCell.xib; sourceTree = "<group>"; };
 		04ECB5721FFDF4FF00C282E0 /* AddAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
 		04ECB5731FFDF4FF00C282E0 /* AddAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAccountViewController.xib; sourceTree = "<group>"; };
 		04ECB5761FFDFC2700C282E0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +86,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		041852BC1FFF914A00AEE42B /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				041852B81FFF900D00AEE42B /* TestViewController.swift */,
+				041852B91FFF900D00AEE42B /* TestViewController.xib */,
+				04A67D4B1FFF9DEA00C17ACF /* SimpleTableViewCell.swift */,
+				04A67D4C1FFF9DEA00C17ACF /* SimpleTableViewCell.xib */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		043D2C5C1FF65A4E00A5EED4 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +131,7 @@
 				04F2F3AF1FFB41A2001C3481 /* Main.storyboard */,
 				043D2C711FF65A4E00A5EED4 /* LaunchScreen.storyboard */,
 				043D2C741FF65A4E00A5EED4 /* Info.plist */,
+				041852BC1FFF914A00AEE42B /* Test */,
 			);
 			path = DragMail;
 			sourceTree = "<group>";
@@ -140,10 +160,10 @@
 		04F8B0BF1FFCC457008A465D /* Mail */ = {
 			isa = PBXGroup;
 			children = (
-				04ECB5721FFDF4FF00C282E0 /* AddAccountViewController.swift */,
-				04ECB5731FFDF4FF00C282E0 /* AddAccountViewController.xib */,
 				04ECB5761FFDFC2700C282E0 /* LoginViewController.swift */,
 				04ECB5771FFDFC2700C282E0 /* LoginViewController.xib */,
+				04ECB5721FFDF4FF00C282E0 /* AddAccountViewController.swift */,
+				04ECB5731FFDF4FF00C282E0 /* AddAccountViewController.xib */,
 			);
 			path = Mail;
 			sourceTree = "<group>";
@@ -228,9 +248,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04ECB5791FFDFC2700C282E0 /* LoginViewController.xib in Resources */,
+				04A67D4E1FFF9DEA00C17ACF /* SimpleTableViewCell.xib in Resources */,
 				043D2C731FF65A4E00A5EED4 /* LaunchScreen.storyboard in Resources */,
 				04F2F3C11FFB4742001C3481 /* DragMailViewController.xib in Resources */,
 				04F2F3B01FFB41A2001C3481 /* Main.storyboard in Resources */,
+				041852BB1FFF900D00AEE42B /* TestViewController.xib in Resources */,
 				04ECB5751FFDF4FF00C282E0 /* AddAccountViewController.xib in Resources */,
 				04F2F3BD1FFB4742001C3481 /* BoardTableViewCell.xib in Resources */,
 				04F2F3BF1FFB4742001C3481 /* DragMailCollectionViewCell.xib in Resources */,
@@ -310,11 +332,13 @@
 				04ECB57D1FFE467600C282E0 /* BoardItemViewModel.swift in Sources */,
 				04107F671FFB8AB800B2F079 /* HelperExtensions.swift in Sources */,
 				04107F651FFB890F00B2F079 /* Data.swift in Sources */,
+				041852BA1FFF900D00AEE42B /* TestViewController.swift in Sources */,
 				04F2F3BC1FFB4742001C3481 /* BoardTableViewCell.swift in Sources */,
 				04ECB5741FFDF4FF00C282E0 /* AddAccountViewController.swift in Sources */,
 				04107F6C1FFB9B5400B2F079 /* BoardItem.swift in Sources */,
 				04ECB57B1FFE15AD00C282E0 /* MailProvider.swift in Sources */,
 				043D2C691FF65A4E00A5EED4 /* AppDelegate.swift in Sources */,
+				04A67D4D1FFF9DEA00C17ACF /* SimpleTableViewCell.swift in Sources */,
 				04107F691FFB8C2E00B2F079 /* CustomCollectionView.swift in Sources */,
 				04F2F3C01FFB4742001C3481 /* DragMailViewController.swift in Sources */,
 			);
